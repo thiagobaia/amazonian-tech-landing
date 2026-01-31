@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { footer } from '@/data/siteData';
-import { Instagram, Zap } from 'lucide-react';
+import { footer, companyInfo } from '@/data/siteData';
+import { Instagram } from 'lucide-react';
 
 const Footer = () => {
   const { language } = useLanguage();
@@ -33,12 +33,12 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
-            <a href="#hero" className="flex items-center gap-2 mb-4">
+            <a href="#hero" className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Zap className="text-primary-foreground" size={20} />
+                <span className="text-primary-foreground font-bold text-2xl italic">{companyInfo.logo}</span>
               </div>
               <span className="text-xl font-bold">
-                Tech<span className="text-primary">Amazônia</span>
+                {companyInfo.name}
               </span>
             </a>
             <p className="text-muted-foreground max-w-sm">
