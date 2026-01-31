@@ -2,23 +2,31 @@
 
 export type Language = 'pt' | 'es' | 'en';
 
+export const companyInfo = {
+  name: 'Master Creator',
+  logo: 'M',
+};
+
 export const navigation = {
   pt: [
     { name: 'Início', href: '#hero' },
     { name: 'Sobre Nós', href: '#sobre' },
     { name: 'Serviços', href: '#servicos' },
+    { name: 'Portfólio', href: '#portfolio' },
     { name: 'Contato', href: '#contato' },
   ],
   es: [
     { name: 'Inicio', href: '#hero' },
     { name: 'Sobre Nosotros', href: '#sobre' },
     { name: 'Servicios', href: '#servicos' },
+    { name: 'Portafolio', href: '#portfolio' },
     { name: 'Contacto', href: '#contato' },
   ],
   en: [
     { name: 'Home', href: '#hero' },
     { name: 'About Us', href: '#sobre' },
     { name: 'Services', href: '#servicos' },
+    { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contato' },
   ],
 };
@@ -256,10 +264,11 @@ export const contact = {
 
 export const footer = {
   pt: {
-    company: 'TechAmazônia',
+    company: 'Master Creator',
     description: 'Transformando ideias em soluções digitais desde o coração da Amazônia.',
     links: {
       services: 'Serviços',
+      portfolio: 'Portfólio',
       privacy: 'Política de Privacidade',
     },
     hours: {
@@ -271,10 +280,11 @@ export const footer = {
     rights: 'Todos os direitos reservados.',
   },
   es: {
-    company: 'TechAmazônia',
+    company: 'Master Creator',
     description: 'Transformando ideas en soluciones digitales desde el corazón de la Amazonía.',
     links: {
       services: 'Servicios',
+      portfolio: 'Portafolio',
       privacy: 'Política de Privacidad',
     },
     hours: {
@@ -286,10 +296,11 @@ export const footer = {
     rights: 'Todos los derechos reservados.',
   },
   en: {
-    company: 'TechAmazônia',
+    company: 'Master Creator',
     description: 'Transforming ideas into digital solutions from the heart of the Amazon.',
     links: {
       services: 'Services',
+      portfolio: 'Portfolio',
       privacy: 'Privacy Policy',
     },
     hours: {
@@ -299,6 +310,135 @@ export const footer = {
       closed: 'Closed now',
     },
     rights: 'All rights reserved.',
+  },
+};
+
+export const portfolio = {
+  pt: {
+    title: 'Nosso Portfólio',
+    subtitle: 'Projetos que Transformaram Negócios',
+    items: [
+      {
+        title: 'Burger House Delivery',
+        description: 'Sistema completo de delivery para hamburgueria com gestão de pedidos em tempo real e cardápio digital interativo.',
+        category: 'Delivery',
+        image: 'burger',
+      },
+      {
+        title: 'Pizza Express',
+        description: 'Plataforma de pedidos online para pizzaria com personalização de pizzas e rastreamento de entregas.',
+        category: 'Delivery',
+        image: 'pizza',
+      },
+      {
+        title: 'Sushi Master',
+        description: 'Cardápio virtual elegante para restaurante japonês com sistema de reservas e pedidos online.',
+        category: 'Cardápio Virtual',
+        image: 'sushi',
+      },
+      {
+        title: 'TechStore',
+        description: 'E-commerce completo para loja de eletrônicos com integração de pagamentos e gestão de estoque.',
+        category: 'E-commerce',
+        image: 'ecommerce',
+      },
+      {
+        title: 'Clínica Saúde+',
+        description: 'Site institucional para clínica médica com agendamento online e área do paciente.',
+        category: 'Site Institucional',
+        image: 'clinic',
+      },
+      {
+        title: 'Amazônia Eco Tours',
+        description: 'Plataforma de turismo ecológico com reservas de passeios e integração com guias locais.',
+        category: 'E-commerce',
+        image: 'tourism',
+      },
+    ],
+  },
+  es: {
+    title: 'Nuestro Portafolio',
+    subtitle: 'Proyectos que Transformaron Negocios',
+    items: [
+      {
+        title: 'Burger House Delivery',
+        description: 'Sistema completo de delivery para hamburguesería con gestión de pedidos en tiempo real y menú digital interactivo.',
+        category: 'Delivery',
+        image: 'burger',
+      },
+      {
+        title: 'Pizza Express',
+        description: 'Plataforma de pedidos online para pizzería con personalización de pizzas y seguimiento de entregas.',
+        category: 'Delivery',
+        image: 'pizza',
+      },
+      {
+        title: 'Sushi Master',
+        description: 'Menú virtual elegante para restaurante japonés con sistema de reservas y pedidos online.',
+        category: 'Menú Virtual',
+        image: 'sushi',
+      },
+      {
+        title: 'TechStore',
+        description: 'E-commerce completo para tienda de electrónicos con integración de pagos y gestión de inventario.',
+        category: 'E-commerce',
+        image: 'ecommerce',
+      },
+      {
+        title: 'Clínica Salud+',
+        description: 'Sitio institucional para clínica médica con programación online y área del paciente.',
+        category: 'Sitio Institucional',
+        image: 'clinic',
+      },
+      {
+        title: 'Amazônia Eco Tours',
+        description: 'Plataforma de turismo ecológico con reservas de tours e integración con guías locales.',
+        category: 'E-commerce',
+        image: 'tourism',
+      },
+    ],
+  },
+  en: {
+    title: 'Our Portfolio',
+    subtitle: 'Projects that Transformed Businesses',
+    items: [
+      {
+        title: 'Burger House Delivery',
+        description: 'Complete delivery system for burger shop with real-time order management and interactive digital menu.',
+        category: 'Delivery',
+        image: 'burger',
+      },
+      {
+        title: 'Pizza Express',
+        description: 'Online ordering platform for pizzeria with pizza customization and delivery tracking.',
+        category: 'Delivery',
+        image: 'pizza',
+      },
+      {
+        title: 'Sushi Master',
+        description: 'Elegant virtual menu for Japanese restaurant with reservation system and online ordering.',
+        category: 'Virtual Menu',
+        image: 'sushi',
+      },
+      {
+        title: 'TechStore',
+        description: 'Complete e-commerce for electronics store with payment integration and inventory management.',
+        category: 'E-commerce',
+        image: 'ecommerce',
+      },
+      {
+        title: 'Health+ Clinic',
+        description: 'Institutional website for medical clinic with online scheduling and patient area.',
+        category: 'Institutional Site',
+        image: 'clinic',
+      },
+      {
+        title: 'Amazônia Eco Tours',
+        description: 'Ecological tourism platform with tour reservations and integration with local guides.',
+        category: 'E-commerce',
+        image: 'tourism',
+      },
+    ],
   },
 };
 
