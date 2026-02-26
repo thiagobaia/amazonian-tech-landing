@@ -63,7 +63,7 @@ const PortfolioSection = () => {
                 </div>
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-xs font-medium">
+                  <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-xs font-light">
                     {item.category}
                   </span>
                 </div>
