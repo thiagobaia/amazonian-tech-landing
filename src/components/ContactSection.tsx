@@ -1,36 +1,38 @@
-import { useState } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { contact } from '@/data/siteData';
-import { Send, MapPin, Mail, Phone } from 'lucide-react';
+import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { contact } from "@/data/siteData";
+import { Send, MapPin, Mail, Phone } from "lucide-react";
 
 const ContactSection = () => {
   const { language } = useLanguage();
   const content = contact[language];
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    const whatsappNumber = '5594992576989';
+
+    const whatsappNumber = "5594992576989";
     const message = encodeURIComponent(
       `*Novo Contato do Site*\n\n` +
-      `*Nome:* ${formData.name}\n` +
-      `*E-mail:* ${formData.email}\n` +
-      `*Telefone:* ${formData.phone}\n\n` +
-      `*Mensagem:*\n${formData.message}`
+        `*Nome:* ${formData.name}\n` +
+        `*E-mail:* ${formData.email}\n` +
+        `*Telefone:* ${formData.phone}\n\n` +
+        `*Mensagem:*\n${formData.message}`,
     );
-    
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
   };
 
   return (
@@ -72,7 +74,9 @@ const ContactSection = () => {
                   <Phone className="text-primary" size={24} />
                 </div>
                 <div>
-                  <p className="text-muted-foreground text-sm">Telefone / WhatsApp</p>
+                  <p className="text-muted-foreground text-sm">
+                    Telefone / WhatsApp
+                  </p>
                   <p className="font-medium">{content.info.phone}</p>
                 </div>
               </div>

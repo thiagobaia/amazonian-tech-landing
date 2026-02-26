@@ -1,6 +1,8 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-import { hero } from '@/data/siteData';
-import { ArrowRight, Play } from 'lucide-react';
+import { useLanguage } from "@/contexts/LanguageContext";
+import { hero } from "@/data/siteData";
+import { ArrowRight, Play } from "lucide-react";
+
+import video from "@/assets/UHT.mp4";
 
 const HeroSection = () => {
   const { language } = useLanguage();
@@ -9,7 +11,7 @@ const HeroSection = () => {
   const scrollToSection = (id: string) => {
     const element = document.querySelector(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -19,13 +21,18 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')`,
-        }}
-      />
-      
+
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={video} type="video/mp4" />
+        Seu navegador não suporta vídeos.
+      </video>
+
       {/* Dark Overlay */}
       <div className="gradient-overlay" />
 
@@ -36,21 +43,27 @@ const HeroSection = () => {
           <br />
           <span className="text-primary">{content.highlight}</span>
         </h1>
-        
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+
+        <p
+          className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 animate-fade-in"
+          style={{ animationDelay: "0.2s" }}
+        >
           {content.subtitle}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <div
+          className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in"
+          style={{ animationDelay: "0.4s" }}
+        >
           <button
-            onClick={() => scrollToSection('#contato')}
+            onClick={() => scrollToSection("#contato")}
             className="btn-primary flex items-center justify-center gap-2"
           >
             {content.cta}
             <ArrowRight size={20} />
           </button>
           <button
-            onClick={() => scrollToSection('#servicos')}
+            onClick={() => scrollToSection("#servicos")}
             className="btn-outline flex items-center justify-center gap-2"
           >
             <Play size={20} />

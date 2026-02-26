@@ -1,14 +1,21 @@
-import { useLanguage } from '@/contexts/LanguageContext';
-import { portfolio } from '@/data/siteData';
-import { ExternalLink } from 'lucide-react';
+import { useLanguage } from "@/contexts/LanguageContext";
+import { portfolio } from "@/data/siteData";
+import { ExternalLink } from "lucide-react";
+
+import grasshopperImg from "@/assets/portfolio/grass.png";
+import rapidImg from "@/assets/portfolio/rapid.png";
+import cadutallerImg from "@/assets/portfolio/cadu-taller.png";
+import ambiexpressImg from "@/assets/portfolio/ambiexpress.png";
+import topamImg from "@/assets/portfolio/topam.png";
+import mastercreatorImg from "@/assets/portfolio/mastercreator.png";
 
 const portfolioImages: Record<string, string> = {
-  burger: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop',
-  pizza: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop',
-  sushi: 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=600&h=400&fit=crop',
-  ecommerce: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-  clinic: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop',
-  tourism: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&h=400&fit=crop',
+  grasshopper: grasshopperImg,
+  rapid: rapidImg,
+  cadutaller: cadutallerImg,
+  ambiexpress: ambiexpressImg,
+  topam: topamImg,
+  mastercreator: mastercreatorImg,
 };
 
 const PortfolioSection = () => {
@@ -45,7 +52,13 @@ const PortfolioSection = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                   <span className="text-white flex items-center gap-2 text-sm font-medium">
                     <ExternalLink size={16} />
-                    Ver Projeto
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver Projeto
+                    </a>
                   </span>
                 </div>
                 {/* Category Badge */}
