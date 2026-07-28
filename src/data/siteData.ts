@@ -15,21 +15,27 @@ export const navigation = {
     { name: "Sobre Nós", href: "#sobre" },
     { name: "Serviços", href: "#servicos" },
     { name: "Portfólio", href: "#portfolio" },
+    { name: "Tráfego Pago", href: "/outros-servicos" },
     { name: "Contato", href: "#contato" },
+    
   ],
   es: [
     { name: "Inicio", href: "#hero" },
     { name: "Sobre Nosotros", href: "#sobre" },
     { name: "Servicios", href: "#servicos" },
     { name: "Portafolio", href: "#portfolio" },
+    { name: "Tráfico Pagado", href: "/outros-servicos" },
     { name: "Contacto", href: "#contato" },
+    
   ],
   en: [
     { name: "Home", href: "#hero" },
     { name: "About Us", href: "#sobre" },
     { name: "Services", href: "#servicos" },
     { name: "Portfolio", href: "#portfolio" },
+    { name: "Paid Traffic", href: "/outros-servicos" },
     { name: "Contact", href: "#contato" },
+    
   ],
 };
 
@@ -381,12 +387,12 @@ export const portfolio = {
         link: "https://ambiexpress.pt",
       },
       {
-        title: "Topam - Torneio de Pesca Esportiva da Amazônia",
+        title: "SPRT - Sindicato dos Produtores Rurais de Tucuruí",
         description:
-          "Site institucional para festival de pesca esportiva da Amazônia.",
+          "Site institucional para o sindicato de produtores rurais de Tucuruí.",
         category: "Site Institucional",
-        image: "topam",
-        link: "https://topam.com.br",
+        image: "sprt",
+        link: "https://sprtucurui.com.br",
       },
       {
         title: "Master Creator",
@@ -433,12 +439,15 @@ export const portfolio = {
         link: "https://ambiexpress.pt",
       },
       {
-        title: "Topam - Torneo de Pesca Deportiva del Amazonas",
-        description:
-          "Sitio web institucional del festival de pesca deportiva de la Amazonía.",
-        category: "Sitio Institucional",
-        image: "topam",
-        link: "https://topam.com.br",
+        title: "SPRT - Unión de Productores Rurales de Tucuruí",
+
+        description: "Sitio web institucional de la unión de productores rurales de Tucuruí",
+
+        category: "Sitio web institucional",
+
+        image: "sprt",
+
+        link: "https://sprtucurui.com.br"
       },
       {
         title: "Master Creator",
@@ -484,12 +493,12 @@ export const portfolio = {
         link: "https://ambiexpress.pt",
       },
       {
-        title: "Topam - Amazon Sport Fishing Tournament",
+        title: "SPRT - Tucuruí Rural Producers' Union",
         description:
-          "Institutional website for the Amazon sport fishing festival.",
-        category: "Institutional Site",
-        image: "topam",
-        link: "https://topam.com.br",
+          "Institutional website for the Tucuruí rural producers' union.",
+        category: "Institutional Website",
+        image: "sprt",
+        link: "https://sprtucurui.com.br",
       },
       {
         title: "Master Creator",

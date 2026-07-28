@@ -19,8 +19,16 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
+
+    // Verifica se o link contém "/outros-servicos"
+    if (href.includes('/outros-servicos')) {
+      window.open(href, '_blank', 'noopener,noreferrer');
+      return;
+    }
+
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });

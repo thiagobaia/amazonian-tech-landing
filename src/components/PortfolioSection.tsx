@@ -6,7 +6,7 @@ import grasshopperImg from "@/assets/portfolio/grass.png";
 import rapidImg from "@/assets/portfolio/rapid.png";
 import cadutallerImg from "@/assets/portfolio/cadu-taller.png";
 import ambiexpressImg from "@/assets/portfolio/ambiexpress.png";
-import topamImg from "@/assets/portfolio/topam.png";
+import sprtImg from "@/assets/portfolio/sprt.png";
 import mastercreatorImg from "@/assets/portfolio/mastercreator.png";
 
 const portfolioImages: Record<string, string> = {
@@ -14,7 +14,7 @@ const portfolioImages: Record<string, string> = {
   rapid: rapidImg,
   cadutaller: cadutallerImg,
   ambiexpress: ambiexpressImg,
-  topam: topamImg,
+  sprt: sprtImg,
   mastercreator: mastercreatorImg,
 };
 
